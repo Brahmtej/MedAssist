@@ -1,0 +1,21 @@
+CREATE TABLE appointments (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    patient_id UUID NOT NULL,
+    doctor_id UUID NOT NULL,
+    hospital_id UUID NOT NULL,
+    appointment_date DATE NOT NULL,
+    appointment_time TIME NOT NULL,
+    appointment_datetime TIMESTAMP NOT NULL,
+    duration_minutes INTEGER DEFAULT 30,
+    status VARCHAR(50) DEFAULT 'scheduled' CHECK (status IN ('scheduled',
+    'confirmed',
+    'in_progress',
+    'completed',
+    'cancelled',
+    'no_show')),
+    appointment_type VARCHAR(50) DEFAULT 'consultation',
+    chief_complaint TEXT,
+    notes TEXT,
+    created_at TIMESTAMP DEFAULT NOW(),
+    updated_at TIMESTAMP DEFAULT NOW()
+);

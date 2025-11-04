@@ -1,0 +1,20 @@
+CREATE TABLE prescriptions (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    patient_id UUID NOT NULL,
+    doctor_id UUID NOT NULL,
+    medical_record_id UUID,
+    prescription_text TEXT NOT NULL,
+    ocr_text TEXT,
+    image_url TEXT,
+    date_issued TIMESTAMP DEFAULT NOW(),
+    valid_until DATE,
+    status VARCHAR(50) DEFAULT 'active' CHECK (status IN ('active',
+    'dispensed',
+    'expired',
+    'cancelled')),
+    pharmacy_dispensed_id UUID,
+    dispensed_at TIMESTAMP,
+    notes TEXT,
+    created_at TIMESTAMP DEFAULT NOW(),
+    updated_at TIMESTAMP DEFAULT NOW()
+);
