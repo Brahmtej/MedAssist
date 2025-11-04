@@ -8,8 +8,7 @@
 
 MedAssist is a comprehensive healthcare management platform that streamlines healthcare operations through role-based access control, electronic health records, e-prescriptions, lab reports, and patient care coordination. Built with modern web technologies and designed for healthcare professionals and patients.
 
-![MedAssist Platform](https://img.shields.io/badge/Platform-Live-brightgreen) **Live Demo**: [https://8nv21bn9sslp.space.minimax.io](https://8nv21bn9sslp.space.minimax.io)
-
+![MedAssist Platform](https://img.shields.io/badge/Platform-Live-brightgreen) 
 ## 🏥 Features
 
 ### Core Functionality
